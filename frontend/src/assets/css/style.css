@@ -13,3 +13,6 @@ body{
 .container{
     flex:1;
 }
+.rounded-a{
+    border-radius: 15px;
+}
