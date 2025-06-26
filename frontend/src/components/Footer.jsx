@@ -1,4 +1,5 @@
 import React from 'react'
+import { AuthContext } from '../AuthProvider'
 
 const Footer = () => {
   return (
