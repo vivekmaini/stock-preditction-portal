@@ -18,8 +18,12 @@ import { useContext } from "react"
      <nav className="navbar container pt-4 pb-4 align-items-start">
         <Link className=" navbar-brand text-light" to="/">Stock Prediction Portal</Link>
        <div>
-        {isloggedIn ?(
-         <button className="btn btn-danger" onClick={handlelogout}>Logout</button>
+        {isloggedIn ?(<>
+          <Button text='Dashboard' class='btn-info space' url='/dashboard'></Button>
+          &nbsp;
+          <button className="btn btn-danger" onClick={handlelogout}>Logout</button>
+        </>
+         
         ):
         (
         <>

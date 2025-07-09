@@ -2,7 +2,7 @@ import {useState,useContext,createContext} from 'react'
 const AuthContext=createContext();
 const AuthProvider = ({children}) => {
     const [isloggedIn,setisloggedIn]=useState(
-        !!localStorage.getItem('acccessToken')
+        !!localStorage.getItem('accessToken')
     )
   return (
     

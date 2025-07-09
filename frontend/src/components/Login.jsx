@@ -5,6 +5,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import { AuthContext } from "../AuthProvider";
 import AuthProvider from "../AuthProvider";
 import { useNavigate } from "react-router-dom";
+import axiosinstance from "../axiosinstance";
 const Login = () => {
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
@@ -21,16 +22,14 @@ const Login = () => {
     };
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/v1/token/",
-        userdata
+      const response = await axiosinstance.post('http://127.0.0.1:8000/api/v1/token/',userdata
       );
       localStorage.setItem('accessToken',response.data.access)
       localStorage.setItem("refreshToken",response.data.refresh)
       seterror('')
       console.log("Login  succesfully")
-      navigate('/')
       setisloggedIn(true)
+      navigate('/dashboard')
      
     } catch (error) {
       seterror("invalid credentials");
