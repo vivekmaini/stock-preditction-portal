@@ -15,7 +15,7 @@ import { useContext } from "react"
  }
   return (
     <>
-     <nav className="navbar container pt-4 pb-4 align-items-start ">
+     <nav className="navbar container pt-4 pb-4 align-items-start">
         <Link className=" navbar-brand text-light" to="/">Stock Prediction Portal</Link>
        <div>
         {isloggedIn ?(<>

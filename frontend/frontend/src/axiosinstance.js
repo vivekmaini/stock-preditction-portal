@@ -28,10 +28,12 @@ axios.interceptors.response.use(function(response){
         const response= await axiosinstance.post('/token/refresh',{refresh:refreshToken})
         localStorage.setItem('accessToken',response.data.access)
         originalRequest.headers['Authorization']=`Bearer ${response.data.access}`
+        console.log('yes')
         return axiosinstance(originalRequest)
         }
         catch(error){
-        
+        localStorage.removeItem('accessToken')
+        localStorage.removeItem('refreshToken')
         }
     }
      return Promise.reject(error);

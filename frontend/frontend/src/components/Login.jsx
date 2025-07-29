@@ -39,10 +39,10 @@ const Login = () => {
   };
   return (
     <>
-      <div className="container App">
+      <div className="container">
         <div className="row justify-content-center ">
-          <div className="col-md-6 bg-color  p-5 login-box rounded-a">
-            <h3 className="text-center text-light mb-4 ">Login to our Portal</h3>
+          <div className="col-md-6 bg-color  p-5 ">
+            <h3 className="text-center text-light mb-4">Login to our Portal</h3>
             <form onSubmit={handlelogin}>
               
                 <div className='mb-4'>
